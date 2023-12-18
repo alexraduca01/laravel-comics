@@ -37,3 +37,25 @@ h3 {
 .cursor-pointer {
     cursor: pointer;
 }
+footer {
+    background-image: url(img/footer-bg.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+.footer-img {
+    position: absolute;
+    top: -25%;
+    right: 0;
+    width: 50%;
+}
+li {
+    list-style: none;
+    color: white;
+}
+h5 {
+    margin: 0;
+}
+.my-font-size {
+    font-size: 0.9rem;
+    cursor: pointer;
+}

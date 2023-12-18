@@ -6,10 +6,10 @@
         <nav>
             <ul class="nav">
                 <li class="nav-item">
-                    <a class="nav-link text-black text-uppercase" href="#">characters</a>
+                    <a class="nav-link text-black text-uppercase" href="{{ route('characters')}}">characters</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-black text-uppercase" href="#">comics</a>
+                    <a class="nav-link text-black text-uppercase" href="{{ route('home') }}">comics</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link text-black text-uppercase" href="#">movies</a>

@@ -18,4 +18,11 @@ Route::get('/', function () {
     $content = config('navcontent.navcontent');
     $header = config('headercontent.headercontent');
     return view('home', compact('comics'), compact('content'), compact('header'));
-});
+})->name('home');
+
+Route::get('/characters', function () {
+    $comics = config('db.comics');
+    $content = config('navcontent.navcontent');
+    $header = config('headercontent.headercontent');
+    return view('pages.characters', compact('comics'), compact('content'), compact('header'));
+})->name('characters');

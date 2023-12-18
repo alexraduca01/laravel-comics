@@ -9,6 +9,10 @@ $fa-font-path: "../webfonts" !default;
 
 @import '~bootstrap/scss/bootstrap';
 
+$main-color: #0282F9;
+$main-background-color: #303030;
+$main-text-color: #959595;
+
 .top-section {
     height: 40vh;
     background-image: url(img/jumbotron.jpg);
@@ -26,7 +30,7 @@ h3 {
 }
 .my-nav {
     margin: 0;
-    background-color: #0282F9;
+    background-color: $main-color;
     position: relative;
     z-index: 1000;
 }
@@ -57,5 +61,22 @@ h5 {
 }
 .my-font-size {
     font-size: 0.9rem;
+    cursor: pointer;
+}
+.my-container {
+    background-color: $main-background-color;
+    position: relative;
+    z-index: 1000;
+}
+.sign-up {
+    color: white;
+    border: 2px solid $main-color;
+    cursor: pointer;
+}
+.my-span {
+    color: $main-color;
+    cursor: pointer;
+}
+.second-footer-img {
     cursor: pointer;
 }

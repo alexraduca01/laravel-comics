@@ -27,6 +27,8 @@
 
     @include('partials.footer')
 
+    @include('partials.secondfooter')
+
 </body>
 
 </html>

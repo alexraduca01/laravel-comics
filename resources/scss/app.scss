@@ -8,3 +8,15 @@ $fa-font-path: "../webfonts" !default;
 @import "~@fortawesome/fontawesome-free/scss/brands";
 
 @import '~bootstrap/scss/bootstrap';
+
+.top-section {
+    height: 40vh;
+    background-image: url(img/jumbotron.jpg);
+    background-size: 100%;
+}
+h3 {
+    position: absolute;
+    bottom: -8%;
+    left: 22%;
+    z-index: 2000;
+}

@@ -6,32 +6,16 @@
         <nav>
             <ul class="nav">
                 <li class="nav-item">
-                    <a class="nav-link text-black text-uppercase" href="{{ route('characters')}}">characters</a>
+                    <a class="nav-link text-uppercase {{ Route::currentRouteName() == 'characters' ? 'active' : 'text-black' }}" href="{{ route('characters')}}">characters</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-black text-uppercase" href="{{ route('home') }}">comics</a>
+                    <a class="nav-link text-uppercase {{ Route::currentRouteName() == 'home' ? 'active' : 'text-black' }}" href="{{ route('home') }}">comics</a>
                 </li>
+                @foreach ($header as $item)
                 <li class="nav-item">
-                    <a class="nav-link text-black text-uppercase" href="#">movies</a>
+                    <a class="nav-link text-black text-uppercase" href="#">{{ $item }}</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link text-black text-uppercase" href="#">tv</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-black text-uppercase" href="#">games</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-black text-uppercase" href="#">collectibles</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-black text-uppercase" href="#">videos</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-black text-uppercase" href="#">fans</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-black text-uppercase" href="#">news</a>
-                </li>
+                @endforeach
             </ul>
         </nav>
         <div class="input-group w-auto ">

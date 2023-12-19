@@ -16,13 +16,19 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     $comics = config('db.comics');
     $content = config('navcontent.navcontent');
-    $header = config('headercontent.headercontent');
-    return view('home', compact('comics'), compact('content'), compact('header'));
+    $header = config('headerdb.headercontent');
+    $comicsContent = config('footercontent.dcComics');
+    $dc = config('footercontent.dc');
+    $sites = config('footercontent.sites');
+    return view('home', compact('comics', 'content', 'header', 'comicsContent', 'dc', 'sites'));
 })->name('home');
 
 Route::get('/characters', function () {
     $comics = config('db.comics');
     $content = config('navcontent.navcontent');
-    $header = config('headercontent.headercontent');
-    return view('pages.characters', compact('comics'), compact('content'), compact('header'));
+    $header = config('headerdb.headercontent');
+    $comicsContent = config('footercontent.dcComics');
+    $dc = config('footercontent.dc');
+    $sites = config('footercontent.sites');
+    return view('pages.characters', compact('comics', 'content', 'header', 'comicsContent', 'dc', 'sites'));
 })->name('characters');

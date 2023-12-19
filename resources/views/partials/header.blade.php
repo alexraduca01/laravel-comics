@@ -1,7 +1,7 @@
 <header>
     <div class="container d-flex justify-content-between align-items-center p-3">
         <div>
-            <img src="img/dc-logo.png" alt="logo">
+            <img src="../img/dc-logo.png" alt="logo">
         </div>
         <nav>
             <ul class="nav">
@@ -9,7 +9,7 @@
                     <a class="nav-link text-uppercase {{ Route::currentRouteName() == 'characters' ? 'active' : 'text-black' }}" href="{{ route('characters')}}">characters</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-uppercase {{ Route::currentRouteName() == 'home' ? 'active' : 'text-black' }}" href="{{ route('home') }}">comics</a>
+                    <a class="nav-link text-uppercase {{ Route::currentRouteName() == 'comics.index' ? 'active' : 'text-black' }}" href="{{ route('comics.index') }}">comics</a>
                 </li>
                 @foreach ($header as $item)
                 <li class="nav-item">

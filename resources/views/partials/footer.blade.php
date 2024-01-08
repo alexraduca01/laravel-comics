@@ -1,7 +1,7 @@
 <footer>
     <div class="container d-flex p-0 align-items-center position-relative py-5">
         <div class="col-4 d-flex gap-4">
-            <div>
+            {{-- <div>
                 <ul class="m-0">
                     <li class="text-uppercase mb-2"><h5 class="text-white">dc comics</h5></li>
                     @foreach ($comicsContent as $item)
@@ -30,7 +30,7 @@
                     @endforeach
                 </ul>
             </div>
-        </div>
+        </div> --}}
         <div class="col-8 d-flex justify-content-end ">
             <img src="img/dc-logo-bg.png" class="footer-img" alt="big-logo">
         </div>

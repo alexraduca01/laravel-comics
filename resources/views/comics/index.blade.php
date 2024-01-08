@@ -6,12 +6,12 @@
     <main class="w-100 bg-black p-5">
         <div class="container">
             <div class="row">
-                @foreach ( $comics as $item)
+                @foreach ($comics as $comic)
                     <div class="col-2 g-3">
-                        <img class="my-card-img" src="{{ $item['thumb'] }}" alt="{{ $item['title'] }}">
+                        <img class="my-card-img" src="{{ $comic->thumb }}" alt="{{ $comic->title }}">
                         <div>
-                            <h5 class="text-white m-0">{{ $item['title'] }}</h5>
-                            <a class="btn btn-primary" href="{{route('comics.show', $item['id'])}}">More info</a>
+                            <h5 class="text-white m-0">{{ $comic->title }}</h5>
+                            <a class="btn btn-primary" href="{{route('comics.show', $comic->id)}}">More info</a>
                         </div>
                     </div>
                 @endforeach

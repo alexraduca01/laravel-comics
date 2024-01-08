@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\ComicController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -22,42 +24,35 @@ Route::get('/', function () {
     return view('home', compact('content', 'header', 'comicsContent', 'dc', 'sites'));
 })->name('home');
 
+Route::resource('comics', ComicController::class);
+
 Route::get('/characters', function () {
-    $comics = config('db.comics');
+    // $comics = config('db.comics');
     $content = config('navcontent.navcontent');
     $header = config('headerdb.headercontent');
     $comicsContent = config('footercontent.dcComics');
     $dc = config('footercontent.dc');
     $sites = config('footercontent.sites');
-    return view('pages.characters', compact('comics', 'content', 'header', 'comicsContent', 'dc', 'sites'));
+    return view('pages.characters', compact('content', 'header', 'comicsContent', 'dc', 'sites'));
 })->name('characters');
 
-Route::get('/comics', function () {
-    $comics = config('db.comics');
-    $content = config('navcontent.navcontent');
-    $header = config('headerdb.headercontent');
-    $comicsContent = config('footercontent.dcComics');
-    $dc = config('footercontent.dc');
-    $sites = config('footercontent.sites');
-    return view('comics.index', compact('comics', 'content', 'header', 'comicsContent', 'dc', 'sites'));
-})->name('comics.index');
+// Route::get('/comics', function () {
+//     // $comics = config('db.comics');
+//     $content = config('navcontent.navcontent');
+//     $header = config('headerdb.headercontent');
+//     $comicsContent = config('footercontent.dcComics');
+//     $dc = config('footercontent.dc');
+//     $sites = config('footercontent.sites');
+//     return view('comics.index', compact('content', 'header', 'comicsContent', 'dc', 'sites'));
+// })->name('comics.index');
 
-Route::get('/comics/{id}', function ($id) {
-    $comics = config('db.comics');
-    $comic = null;
-    $content = config('navcontent.navcontent');
-    $header = config('headerdb.headercontent');
-    $comicsContent = config('footercontent.dcComics');
-    $dc = config('footercontent.dc');
-    $sites = config('footercontent.sites');
-    foreach ($comics as $item) {
-        if ($item['id'] == $id) {
-            $comic = $item;
-        }
-    }
-    if ($comic) {
-        return view('comics.show', compact('comics', 'comic','content', 'header', 'comicsContent', 'dc', 'sites'));
-    } else {
-        abort(404);
-    }
-})->name('comics.show');
+// Route::get('/comics/{id}', function ($id) {
+//     // $comics = config('db.comics');
+//     $comic = null;
+//     $content = config('navcontent.navcontent');
+//     $header = config('headerdb.headercontent');
+//     $comicsContent = config('footercontent.dcComics');
+//     $dc = config('footercontent.dc');
+//     $sites = config('footercontent.sites');
+//     return view('comics.show', compact('comic','content', 'header', 'comicsContent', 'dc', 'sites'));
+// })->name('comics.show');

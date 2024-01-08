@@ -11,11 +11,11 @@
                 <li class="nav-item">
                     <a class="nav-link text-uppercase {{ Route::currentRouteName() == 'comics.index' ? 'active' : 'text-black' }}" href="{{ route('comics.index') }}">comics</a>
                 </li>
-                @foreach ($header as $item)
+                {{-- @foreach ($header as $item)
                 <li class="nav-item">
                     <a class="nav-link text-black text-uppercase" href="#">{{ $item }}</a>
                 </li>
-                @endforeach
+                @endforeach --}}
             </ul>
         </nav>
         <div class="input-group w-auto ">
